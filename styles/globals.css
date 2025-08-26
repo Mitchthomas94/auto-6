@@ -171,5 +171,63 @@ section[id*="contact"] button { width:100%; box-sizing:border-box; }
 @media (max-width:768px){
   section[id*="contact"] * { margin-left:0 !important; transform:none !important; }
 }
+/* === MOBILE CENTERING & NO-SPILL FIX === */
+@media (max-width: 860px){
+  html, body { overflow-x: hidden; }
+
+  /* keep all sections/containers centered */
+  .container, .section {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  /* center all common “cards/boxes” */
+  .card,
+  .step-card,
+  .quote,
+  .faq details,
+  .industry-card,
+  .result-card {
+    width: 100%;
+    max-width: 680px;      /* keeps a nice readable line-length */
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* any grids collapse to 1 col on phones */
+  .grid4, .grid3, .grid2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* === PRICING GRID (desktop 3 cols / mobile rows) === */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+.pricing-card { min-width: 0; } /* lets text wrap inside flex/grid */
+
+@media (max-width: 860px){
+  .pricing-grid {
+    grid-template-columns: 1fr;   /* rows on mobile */
+    gap: 1.25rem;
+  }
+  .pricing-card {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+  }
+}
 
 /* End of file */
