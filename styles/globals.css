@@ -1,46 +1,68 @@
+/* =========================================================
+   Global styles — AutoBooked AI
+   Desktop stays the same; mobile fixes are grouped at bottom.
+   ========================================================= */
 
-:root { --brand: #2563eb; }
-html, body { margin:0; padding:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; color:#0f172a; background:#f8fafc; }
-a { color: var(--brand); text-decoration: none; }
+:root { --brand:#2563eb; }
+
+html, body {
+  margin:0; padding:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:#0f172a; background:#f8fafc;
+  overflow-x:hidden; /* stop sideways scroll on mobile */
+}
+
+a { color:var(--brand); text-decoration:none; }
 a:hover { opacity:.85; }
-.container { max-width: 1120px; margin: 0 auto; padding: 0 1rem; }
-.btn { display:inline-flex; align-items:center; padding:.75rem 1.25rem; border-radius:.75rem; background: var(--brand); color:#fff; }
+
+.container { max-width:1120px; margin:0 auto; padding:0 1rem; }
+
+.btn { display:inline-flex; align-items:center; padding:.75rem 1.25rem; border-radius:.75rem; background:var(--brand); color:#fff; }
 .btn-outline { display:inline-flex; align-items:center; padding:.75rem 1.25rem; border-radius:.75rem; border:1px solid #cbd5e1; color:#0f172a; }
+
 .card { background:#fff; border:1px solid #e2e8f0; border-radius:1rem; padding:1.25rem; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+
 .nav { position:sticky; top:0; backdrop-filter:saturate(180%) blur(8px); background:rgba(255,255,255,.9); border-bottom:1px solid #e2e8f0; height:64px; z-index:10; }
 .nav-inner { height:64px; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+
 .footer { margin-top:4rem; border-top:1px solid #e2e8f0; background:#fff; }
-.footer-grid { display:grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap:2rem; padding:3rem 0; }
-@media (max-width: 768px){ .footer-grid { grid-template-columns: 1fr; } }
-.nav a { margin-right: 1rem; font-weight:500; }
-.h1 { font-size: clamp(2rem, 2vw + 1.5rem, 3rem); line-height:1.1; margin:0 0 0.5rem 0; }
+.footer-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem; padding:3rem 0; }
+@media (max-width:768px){ .footer-grid { grid-template-columns:1fr; } }
+
+.nav a { margin-right:1rem; font-weight:500; }
+
+.h1 { font-size:clamp(2rem, 2vw + 1.5rem, 3rem); line-height:1.1; margin:0 0 .5rem 0; }
 .subtle { color:#334155; }
-.faint { color:#64748b; }
-.grid4 { display:grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap:1rem; }
+.faint  { color:#64748b; }
+
+.grid4 { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1rem; }
+
 .mt2 { margin-top:2rem; }
 .mt1 { margin-top:1rem; }
 .pt-header { padding-top:64px; }
+
 .flex-between { display:flex; align-items:center; justify-content:space-between; }
 .list { margin:0 0 1rem 1rem; }
 .pre { white-space:pre-wrap; line-height:1.6; }
+
 .centerwrap { padding:4rem 0; text-align:center; max-width:900px; margin:0 auto; }
 .maxwrap { max-width:1100px; margin:0 auto; }
+
 .aspect-video { aspect-ratio:16/9; }
 .iframe { width:100%; height:70vh; min-height:480px; border:0; }
 
 
 /* --- Steps / timeline components --- */
-.lead { font-size: 1.05rem; color:#334155; }
+.lead { font-size:1.05rem; color:#334155; }
 .muted { color:#64748b; }
 
-.steps { display:grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap:1.25rem; margin-top:1.25rem; }
-.step-card { grid-column: span 12; background:#fff; border:1px solid #e2e8f0; border-radius:1rem; padding:1.25rem; display:flex; gap:1rem; align-items:flex-start; box-shadow:0 1px 2px rgba(0,0,0,.04); }
-@media (min-width: 900px){ 
-  .step-card { grid-column: span 6; } 
-}
+.steps { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:1.25rem; margin-top:1.25rem; }
+.step-card { grid-column:span 12; background:#fff; border:1px solid #e2e8f0; border-radius:1rem; padding:1.25rem; display:flex; gap:1rem; align-items:flex-start; box-shadow:0 1px 2px rgba(0,0,0,.04); }
+@media (min-width:900px){ .step-card { grid-column:span 6; } }
+
 .badge { display:inline-flex; align-items:center; justify-content:center; width:40px; height:40px; border-radius:999px; background:var(--brand); color:#fff; font-weight:700; flex-shrink:0; }
 .step-title { margin:0; font-weight:700; }
-.step-desc { margin:.25rem 0 0 0; color:#475569; }
+.step-desc  { margin:.25rem 0 0 0; color:#475569; }
 
 .divider { height:1px; background:#e2e8f0; margin:1.25rem 0; }
 
@@ -49,78 +71,105 @@ a:hover { opacity:.85; }
 
 
 /* --- Industries grid helpers --- */
-.grid3 { display:grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
-@media (max-width: 900px){ .grid3 { grid-template-columns: 1fr; } }
+.grid3 { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+@media (max-width:900px){ .grid3 { grid-template-columns:1fr; } }
+
 .card-title { display:flex; align-items:center; gap:.5rem; margin:0 0 .25rem 0; font-weight:700; }
 .icon { font-size:1.1rem; }
-.section + .section { margin-top: 2rem; }
-.section h2 { margin: 0 0 .5rem 0; font-size: 1.4rem; }
+.section + .section { margin-top:2rem; }
+.section h2 { margin:0 0 .5rem 0; font-size:1.4rem; }
 
 
 /* --- Accessibility & polish --- */
-:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+:focus-visible { outline:3px solid var(--brand); outline-offset:2px; }
 .badge-rec { display:inline-block; background:#dbeafe; color:#1d4ed8; font-weight:700; padding:.2rem .5rem; border-radius:.5rem; font-size:.8rem; }
+
 .checklist { list-style:none; margin:0; padding:0; }
-.checklist li::before { content: '✔'; display:inline-block; margin-right:.5rem; }
-.testimonials { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:1rem; }
-@media (max-width: 900px){ .testimonials { grid-template-columns: 1fr; } }
+.checklist li::before { content:'✔'; display:inline-block; margin-right:.5rem; }
+
+.testimonials { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+@media (max-width:900px){ .testimonials { grid-template-columns:1fr; } }
+
 .quote { background:#fff; border:1px solid #e2e8f0; border-radius:1rem; padding:1rem; }
-.faq { max-width: 900px; margin: 0 auto; }
+
+.faq { max-width:900px; margin:0 auto; }
 .faq details { background:#fff; border:1px solid #e2e8f0; border-radius:.75rem; padding:.75rem 1rem; }
 .faq details + details { margin-top:.75rem; }
 .faq summary { font-weight:700; cursor:pointer; }
 
 
-/* --- Sticky CTA mobile --- */
+/* --- Sticky CTA mobile (bottom) --- */
 .sticky-cta { position:fixed; bottom:0; left:0; right:0; background:#fff; border-top:1px solid #e2e8f0; padding:.75rem 1rem; display:flex; justify-content:center; z-index:50; }
-@media (min-width: 768px){ .sticky-cta { display:none; } }
+@media (min-width:768px){ .sticky-cta { display:none; } }
 
-
-/* --- Mobile sticky CTA --- */
-.mobile-cta { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50; display:none; }
-.mobile-cta-inner { margin: 0 auto; max-width: 1120px; padding: .75rem 1rem; display:flex; justify-content: center; }
-@media (max-width: 768px){
+/* Optional second implementation used in your project */
+.mobile-cta { position:fixed; left:0; right:0; bottom:0; z-index:50; display:none; }
+.mobile-cta-inner { margin:0 auto; max-width:1120px; padding:.75rem 1rem; display:flex; justify-content:center; }
+@media (max-width:768px){
   .mobile-cta { display:block; }
-  body { padding-bottom: 64px; } /* avoid overlap */
+  body { padding-bottom:64px; } /* avoid overlap with sticky CTA */
 }
 
-
-/* === Home feature cards mobile wrap fix + header logo alignment === */
+/* Make brand image behave */
 .brand img { display:block; max-width:100%; height:auto; }
 
-@media (max-width: 860px){
-  .grid4 .card, .grid3 .card { min-width: 0; overflow-wrap:anywhere; word-break:break-word; hyphens:auto; }
-}
-/* ===== MOBILE HOTFIX v2 (header + feature cards) ===== */
+/* =========================================================
+   MOBILE REFINEMENTS (≤ 860px)
+   ========================================================= */
+@media (max-width:860px){
 
-/* 1) Hide header CTA on phones (use only the sticky CTA on mobile) */
-.nav .btn.nav-cta { display: none; }
-@media (min-width: 860px){
-  .nav .btn.nav-cta { display: inline-flex; }
+  /* 1) Header layout & duplicate CTA */
+  .nav              { height:auto; }
+  .nav-inner        { height:auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; row-gap:.5rem; }
+  .nav-links        { display:flex; flex-wrap:wrap; gap:.75rem; width:100%; justify-content:center; }
+  .nav .btn.nav-cta { display:none !important; }  /* hide header CTA on phones (use sticky CTA instead) */
+
+  /* Increase main top padding when header wraps to two lines */
+  .pt-header { padding-top:96px; }
+
+  /* 2) Containers & cards — keep centered and full width with good padding */
+  .container {
+    max-width:1120px;
+    margin-left:auto !important;
+    margin-right:auto !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+    box-sizing:border-box;
+  }
+  .card {
+    width:100%;
+    margin-left:0; margin-right:0;
+  }
+
+  /* 3) Grids — stack columns into rows for readability */
+  .grid4 { grid-template-columns:1fr; }
+  .grid3 { grid-template-columns:1fr; }
+
+  /* 4) Wrapping rules:
+        - Normal cards: natural wrapping (prevents the “vertical letters” issue)
+        - Pricing cards: allow aggressive wrapping to avoid overflow */
+  .grid4 .card, .grid3 .card, .card {
+    overflow-wrap:normal;
+    word-break:normal;
+    hyphens:auto;
+  }
 }
 
-/* 2) Make nav links wrap cleanly instead of overlapping */
-.nav-links { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
-
-/* 3) Stack 4-up grids on mobile (feature/value cards) */
-@media (max-width: 860px){
-  .grid4 { grid-template-columns: 1fr !important; }
-  .grid4 .card { min-width: 0; }
+/* Pricing grid wrapper used on /pricing (desktop = 3 cols; mobile rule above stacks them) */
+.pricing-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+@media (max-width:860px){
+  .pricing-grid { grid-template-columns:1fr; gap:1.25rem; }
+  .pricing-grid .card { overflow-wrap:anywhere; word-break:break-word; hyphens:auto; }
 }
 
-/* 4) Undo aggressive word-breaking on general cards 
-      (this was causing the vertical-looking, split-up words) */
-.grid4 .card,
-.grid3 .card,
-.card {
-  overflow-wrap: normal;
-  word-break: normal;
-  hyphens: auto;
+/* Contact form — keep nicely centered on mobile */
+section[id*="contact"] .container { max-width:720px; margin:0 auto; }
+section[id*="contact"] form { width:100%; margin:0 auto; }
+section[id*="contact"] input,
+section[id*="contact"] textarea,
+section[id*="contact"] button { width:100%; box-sizing:border-box; }
+@media (max-width:768px){
+  section[id*="contact"] * { margin-left:0 !important; transform:none !important; }
 }
 
-/* 5) Keep stronger wrapping ONLY where it’s actually needed (pricing) */
-.pricing-grid .card {
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  hyphens: auto;
-}
+/* End of file */
