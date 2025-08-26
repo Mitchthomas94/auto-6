@@ -15,7 +15,7 @@ export default function About(){
       <section className="container mt2 section">
         <h1 className="h1">About AutoBooked AI</h1>
         <p className="lead" style={{maxWidth:800}}>
-          We help good businesses start more good conversations. AutoBooked AI blends smart
+          We help businesses start more good conversations. AutoBooked AI blends smart
           automation with human judgment to book qualified meetings—without the spammy tactics.
         </p>
       </section>
