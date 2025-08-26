@@ -304,5 +304,40 @@ img, svg, video { max-width: 100%; height: auto; }
     left: auto !important;
   }
 }
+/* ===== MOBILE HEADER FIX ===== */
+@media (max-width: 768px) {
+  header, .navbar, .nav-wrap {
+    display: flex;
+    flex-direction: column;   /* stack logo + nav + button vertically */
+    align-items: center;      /* center everything horizontally */
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  header img, .logo {
+    max-width: 160px;   /* shrink logo so it doesn’t crowd nav */
+    height: auto;
+  }
+
+  nav, .nav-links, .nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;        /* spacing between nav items */
+  }
+
+  nav a, .nav-links a {
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /* Make CTA button full-width but centered */
+  .btn, .start-trial, .cta-header {
+    width: 100%;
+    max-width: 260px;
+    margin: 0.5rem auto 0;
+    text-align: center;
+  }
+}
 
 /* End of file */
