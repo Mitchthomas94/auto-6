@@ -91,3 +91,36 @@ a:hover { opacity:.85; }
 @media (max-width: 860px){
   .grid4 .card, .grid3 .card { min-width: 0; overflow-wrap:anywhere; word-break:break-word; hyphens:auto; }
 }
+/* ===== MOBILE HOTFIX v2 (header + feature cards) ===== */
+
+/* 1) Hide header CTA on phones (use only the sticky CTA on mobile) */
+.nav .btn.nav-cta { display: none; }
+@media (min-width: 860px){
+  .nav .btn.nav-cta { display: inline-flex; }
+}
+
+/* 2) Make nav links wrap cleanly instead of overlapping */
+.nav-links { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
+
+/* 3) Stack 4-up grids on mobile (feature/value cards) */
+@media (max-width: 860px){
+  .grid4 { grid-template-columns: 1fr !important; }
+  .grid4 .card { min-width: 0; }
+}
+
+/* 4) Undo aggressive word-breaking on general cards 
+      (this was causing the vertical-looking, split-up words) */
+.grid4 .card,
+.grid3 .card,
+.card {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: auto;
+}
+
+/* 5) Keep stronger wrapping ONLY where it’s actually needed (pricing) */
+.pricing-grid .card {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
