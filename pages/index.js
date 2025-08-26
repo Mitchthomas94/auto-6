@@ -142,7 +142,7 @@ export default function Home(){
           <h3>New customer offer</h3>
           <p className="subtle">15‑day free trial. No obligation. We’ll prove the system works before you commit.</p>
         </div>
-        <Link href="/book" className="btn" onClick={()=>window.gtag&&window.gtag("event","start_trial")}>Start Free Trial</Link>
+        <Link href="/book" className="btn" onClick={()=>window.gtag&&window.gtag("event","start_trial")}>Book Your Free Strategy Call</Link>
       </div>
     </section>
         </>
