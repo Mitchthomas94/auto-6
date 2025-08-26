@@ -250,5 +250,59 @@ section[id*="contact"] button { width:100%; box-sizing:border-box; }
     hyphens: auto;
   }
 }
+/* ===== MOBILE CENTERING FIX (final) ===== */
+
+/* Never allow sideways scroll */
+html, body { overflow-x: hidden; }
+
+/* Global box-sizing so widths behave */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* Images never push layout wider than the screen */
+img, svg, video { max-width: 100%; height: auto; }
+
+/* Phone layout: hard-center all main wrappers and cards */
+@media (max-width: 860px){
+  /* Your common wrappers */
+  .container,
+  section.container,
+  .section,
+  .centerwrap,
+  .maxwrap,
+  main .container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    max-width: 100% !important;
+  }
+
+  /* Any card-like blocks sit full-width and wrap text */
+  .card,
+  .quote,
+  .step-card,
+  .faq details {
+    width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  /* Grids collapse to single column on phones */
+  .grid2, .grid3, .grid4 { 
+    display: grid !important; 
+    grid-template-columns: 1fr !important; 
+    gap: 1rem !important; 
+  }
+
+  /* Nuke any stray horizontal offsets from earlier tweaks */
+  [style*="translate"], [style*="left:"], [style*="margin-left"] {
+    transform: none !important;
+    left: auto !important;
+  }
+}
 
 /* End of file */
