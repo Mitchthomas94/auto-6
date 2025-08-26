@@ -14,7 +14,7 @@ export default function Home(){
     <section className="container">
       {/* Hero */}
       <div className="centerwrap">
-        <h1 className="h1">Done‑for‑you appointment setting, not more software to learn.</h1>
+        <h1 className="h1">Done‑for‑you appointment setting, for businesses that want results.</h1>
         <p className="subtle" style={{fontSize:'1.1rem'}}>
           We take missed calls, cold leads and half‑interested enquiries and turn them into <strong>booked appointments</strong> on your calendar.
           No chasing. No guesswork. Just conversations that move work forward.
