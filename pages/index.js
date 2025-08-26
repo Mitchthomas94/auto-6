@@ -112,30 +112,28 @@ export default function Home(){
           <summary>Can you work with my CRM and calendar?</summary>
           <div className="subtle">Yes — we’ll integrate with the tools you already use and route bookings to the right calendars.</div>
         </details>
-      </div>
-
       
         <details>
           <summary>How do you handle GDPR?</summary>
-          <div className="subtle">We use legitimate interest where appropriate, minimize data collected, and honor deletion or opt-out requests promptly.</div>
+          <p className="subtle">We use legitimate interest where appropriate, minimize data, and honor opt-outs and deletion requests promptly.</p>
         </details>
         <details>
           <summary>Can we approve messaging?</summary>
-          <div className="subtle">Yes. We share initial sequences and handle important reply threads with human approval where needed.</div>
+          <p className="subtle">Yes. We share initial sequences and handle important reply threads with human approval where needed.</p>
         </details>
         <details>
           <summary>What CRMs and calendars do you support?</summary>
-          <div className="subtle">Google/Outlook calendars plus HubSpot and Salesforce are supported out of the box.</div>
+          <p className="subtle">Google/Outlook calendars plus HubSpot and Salesforce are supported out of the box.</p>
         </details>
         <details>
           <summary>What happens after the trial?</summary>
-          <div className="subtle">You can pick a plan or cancel. There’s no obligation—the trial is designed to prove fit.</div>
+          <p className="subtle">You can pick a plan or cancel. Meetings already booked remain in your calendar either way.</p>
         </details>
         <details>
           <summary>How quickly can we start?</summary>
-          <div className="subtle">Setup typically begins within a few business days after we confirm ICP and access.</div>
+          <p className="subtle">Setup typically begins within 3–5 business days once we confirm ICP and access.</p>
         </details>
-        {/* FAQ schema */}
+</div>{/* FAQ schema */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How does the 15‑day free trial work?", "acceptedAnswer": {"@type": "Answer", "text": "We set up a small, focused campaign so you can see the process and early outcomes. Cancel any time during the trial."}}, {"@type": "Question", "name": "Do you sell leads?", "acceptedAnswer": {"@type": "Answer", "text": "No. We handle outreach and replies, and we book qualified meetings into your calendar."}}, {"@type": "Question", "name": "Which channels do you use?", "acceptedAnswer": {"@type": "Answer", "text": "Email, LinkedIn and SMS by default, plus missed‑call text‑back and chat widget if you want them."}}, {"@type": "Question", "name": "Can you work with my CRM and calendar?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — we’ll integrate with the tools you already use and route bookings to the right calendars."}}]}) }} />
 
       {/* New customer offer */}
