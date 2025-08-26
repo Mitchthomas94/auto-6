@@ -229,5 +229,26 @@ section[id*="contact"] button { width:100%; box-sizing:border-box; }
     margin: 0 auto;
   }
 }
+@media (max-width: 860px){
+  html, body { overflow-x: hidden; }
+  .container, .section {
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+  .card, .step-card, .quote, .faq details {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
 
 /* End of file */
