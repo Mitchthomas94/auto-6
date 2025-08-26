@@ -30,7 +30,7 @@ export default function Header() {
 
         {/* Header CTA */}
         <Link href="/book" className="btn start-trial cta-header">
-          Start Free Trial
+          Book Your Free Strategy Call
         </Link>
       </div>
 
